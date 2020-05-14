@@ -1,5 +1,5 @@
 ## Quick start
-- Clone the repo: `git clone https://github.com/antoalexju/DodleMe-WebUI.git`.
+- Cloner le repo: `git clone https://github.com/antoalexju/DodleMe-WebUI.git`.
 - Installer les modules: `npm install`.
 - Compiler: `npm run build`. ( export dans ./dist )
 
