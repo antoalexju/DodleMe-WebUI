@@ -9,6 +9,13 @@
 - Lancer le server de dev: `npm run start`
 - Acceder à la page : `http://localhost:4200`
 
+## Versionning 
+- Recupere les modifications distantes
+`git stash
+git pull --rebase
+git stash pop`
+
+
 ## Documentation
 Documentation de l'application à venir
 
