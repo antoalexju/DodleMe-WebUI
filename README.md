@@ -10,10 +10,10 @@
 - Acceder à la page : `http://localhost:4200`
 
 ## Versionning 
-- Recupere les modifications distantes
-`git stash`<br>
-`git pull --rebase`<br>
-`git stash pop`<br>
+- Recupere les modifications distantes:<br>
+1) `git stash`<br>
+2) `git pull --rebase`<br>
+3) `git stash pop`<br>
 
 
 ## Documentation
