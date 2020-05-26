@@ -11,9 +11,9 @@
 
 ## Versionning 
 - Recupere les modifications distantes
-`git stash`
-`git pull --rebase`
-`git stash pop`
+`git stash`<br>
+`git pull --rebase`<br>
+`git stash pop`<br>
 
 
 ## Documentation
