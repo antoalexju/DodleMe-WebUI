@@ -2,9 +2,9 @@ import { Component, OnInit, OnDestroy, HostListener } from "@angular/core";
 
 @Component({
   selector: "app-registerpage",
-  templateUrl: "registerpage.component.html"
+  templateUrl: "demo.registerpage.component.html"
 })
-export class RegisterpageComponent implements OnInit, OnDestroy {
+export class DemoRegisterpageComponent implements OnInit, OnDestroy {
   isCollapsed = true;
   focus;
   focus1;

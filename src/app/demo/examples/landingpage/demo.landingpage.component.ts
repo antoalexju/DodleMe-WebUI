@@ -3,9 +3,9 @@ import Chart from "chart.js";
 
 @Component({
   selector: "app-landingpage",
-  templateUrl: "landingpage.component.html"
+  templateUrl: "demo.landingpage.component.html"
 })
-export class LandingpageComponent implements OnInit, OnDestroy {
+export class DemoLandingpageComponent implements OnInit, OnDestroy {
   isCollapsed = true;
   constructor() {}
 
