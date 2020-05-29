@@ -126,6 +126,11 @@
   @include btn-styles($white, $white);
 }
 
+//Personalised button
+.btn-miage {
+  @include btn-styles($miage-states,$white);
+}
+
 .btn {
   &:disabled,
   &[disabled],

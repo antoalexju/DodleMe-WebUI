@@ -131,6 +131,17 @@
       }
     }
 
+    &.btn-miage {
+      color: $miage-states;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &:active:focus {
+        color: $miage-states;
+      }
+    }
+
     &.active,
     &:active,
     &:active:focus,

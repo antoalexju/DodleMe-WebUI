@@ -1,6 +1,6 @@
 // personalised
 //square
-$square-first: grey !default;
+$square-first: #0dc3aa !default;
 $square-second: white !default;
 
 //navbar
@@ -9,6 +9,9 @@ $nav-bar-scroll: #63baa9 !default;
 //footer
 $footer-gradient: $nav-bar-scroll !default;
 $footer-border-top: $nav-bar-scroll !default;
+
+//gradient
+$miage-states: #0dc3aa !default;
 // end personalised
 
 // Global settings
@@ -124,7 +127,7 @@ $info-states: #3358f4 !default;
 $warning-states: #ff6491 !default;
 $danger-states: #ec250d !default;
 $black-states: #1d253b !default;
-//$miage-states: #0eecce !default;
+
 
 $background-black: #217B8A !default;
 $background-states-black: #1e1e24 !default;

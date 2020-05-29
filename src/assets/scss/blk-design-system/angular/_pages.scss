@@ -8,6 +8,15 @@
     @include linear-gradient($danger-states, $danger);
   }
 }
+
+//Personalised
+.login-page,
+.section.section-signup {
+  .squares,
+  .square {
+    @include linear-gradient($miage-states, $white);
+  }
+}
 .footer {
   border-top: 2px solid $footer-border-top;
 }

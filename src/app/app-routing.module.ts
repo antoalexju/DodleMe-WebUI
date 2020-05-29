@@ -9,7 +9,7 @@ import { LoginpageComponent} from "./dodle/loginpage/loginpage.component";
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "home", component: IndexComponent },
-  {path: "login", component:LoginpageComponent}
+  { path: "login", component:LoginpageComponent }
 ];
 
 @NgModule({
