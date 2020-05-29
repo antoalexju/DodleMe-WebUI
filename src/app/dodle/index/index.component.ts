@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, OnDestroy} from '@angular/core';
 import noUiSlider from "nouislider";
 
 @Component({
@@ -6,7 +6,7 @@ import noUiSlider from "nouislider";
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.scss']
 })
-export class IndexComponent implements OnInit {
+export class IndexComponent implements OnInit, OnDestroy {
   isCollapsed = true;
   focus;
   focus1;

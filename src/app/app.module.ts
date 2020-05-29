@@ -8,10 +8,12 @@ import { HttpClientModule } from "@angular/common/http";
 
 import { PagesModule } from "./dodle/pages.module";
 import { IndexComponent } from './dodle/index/index.component';
+import { LoginpageComponent } from './dodle/loginpage/loginpage.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginpageComponent
     // DemoIndexComponent,
     // DemoProfilepageComponent,
     // DemoRegisterpageComponent,
