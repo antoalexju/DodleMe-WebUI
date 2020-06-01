@@ -9,6 +9,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { PagesModule } from "./dodle/pages.module";
 import { IndexComponent } from './dodle/index/index.component';
 import { LoginpageComponent } from './dodle/loginpage/loginpage.component';
+import {CollapseModule, TooltipModule} from "ngx-bootstrap";
 
 @NgModule({
   declarations: [
@@ -19,24 +20,26 @@ import { LoginpageComponent } from './dodle/loginpage/loginpage.component';
     // DemoRegisterpageComponent,
     // DemoLandingpageComponent
   ],
-  imports: [
-    BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule,
-    RouterModule,
-    AppRoutingModule,
-    // BsDropdownModule.forRoot(),
-    // ProgressbarModule.forRoot(),
-    // TooltipModule.forRoot(),
-    // CollapseModule.forRoot(),
-    // TabsModule.forRoot(),
-    PagesModule
-    // PaginationModule.forRoot(),
-    // AlertModule.forRoot(),
-    // BsDatepickerModule.forRoot(),
-    // CarouselModule.forRoot(),
-    // ModalModule.forRoot()
-  ],
+    imports: [
+        BrowserAnimationsModule,
+        FormsModule,
+        HttpClientModule,
+        RouterModule,
+        AppRoutingModule,
+        // BsDropdownModule.forRoot(),
+        // ProgressbarModule.forRoot(),
+        // TooltipModule.forRoot(),
+        // CollapseModule.forRoot(),
+        // TabsModule.forRoot(),
+        PagesModule,
+        CollapseModule,
+        TooltipModule,
+        // PaginationModule.forRoot(),
+        // AlertModule.forRoot(),
+        // BsDatepickerModule.forRoot(),
+        // CarouselModule.forRoot(),
+        // ModalModule.forRoot()
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
