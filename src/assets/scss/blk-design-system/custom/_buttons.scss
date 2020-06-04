@@ -128,7 +128,7 @@
 
 //Personalised button
 .btn-miage {
-  @include btn-styles($miage-states,$white);
+  @include btn-styles($miage-btn-primary,$miage-btn-secondary);
 }
 
 .btn {

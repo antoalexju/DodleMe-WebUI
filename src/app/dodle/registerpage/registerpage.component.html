@@ -75,73 +75,77 @@
                                         src="assets/img/header1.jpg"
                                 />
 
-                                <h4 class="card-title">Connexion</h4>
+                                <h4 class="card-title">Bienvenue</h4>
                             </div>
                             <div class="card-body">
                                 <form class="form">
-                                    <div
-                                            class="input-group"
-                                            [ngClass]="{ 'input-group-focus': focus === true }"
-                                    >
+
+                                    <div class="input-group" [ngClass]="{ 'input-group-focus': focus === true }">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
                                                 <i class="tim-icons icon-single-02"> </i>
                                             </div>
                                         </div>
-                                        <input
-                                                class="form-control"
-                                                placeholder="Full Name"
-                                                type="text"
-                                                (focus)="focus = true"
-                                                (blur)="focus = false"
-                                        />
+                                        <input class="form-control" placeholder="Prénom" type="text" (focus)="focus = true" (blur)="focus = false"/>
                                     </div>
-                                    <div
-                                            class="input-group"
-                                            [ngClass]="{ 'input-group-focus': focus2 === true }"
-                                    >
+
+                                    <div class="input-group" [ngClass]="{ 'input-group-focus': focus1 === true }">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <i class="tim-icons icon-lock-circle"> </i>
+                                                <i class="tim-icons icon-single-02"> </i>
                                             </div>
                                         </div>
-                                        <input
-                                                class="form-control"
-                                                placeholder="Password"
-                                                type="password"
-                                                (focus)="focus2 = true"
-                                                (blur)="focus2 = false"
-                                        />
+                                        <input class="form-control" placeholder="Nom" type="text" (focus)="focus1 = true" (blur)="focus1 = false"/>
                                     </div>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" value="">
-                                            Rester connecté
-                                            <span class="form-check-sign">
-                                                <span class="check"></span>
-                                            </span>
-                                        </label>
+
+                                    <div class="input-group" [ngClass]="{ 'input-group-focus': focus2 === true }">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="tim-icons icon-single-02"> </i>
+                                            </div>
+                                        </div>
+                                        <input class="form-control" placeholder="Email" type="text" (focus)="focus2 = true" (blur)="focus2 = false"/>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="input-group" [ngClass]="{ 'input-group-focus': focus3 === true }">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i class="tim-icons icon-lock-circle"> </i>
+                                                    </div>
+                                                </div>
+                                                <input class="form-control" placeholder="Password" type="password" (focus)="focus3 = true" (blur)="focus3 = false"/>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-group" [ngClass]="{ 'input-group-focus': focus4 === true }">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i class="tim-icons icon-single-02"> </i>
+                                                    </div>
+                                                </div>
+                                                <input class="form-control" placeholder="Confirmer le mot de passe" type="password" (focus)="focus4 = true" (blur)="focus4 = false"/>
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
                                 <hr>
                                 <div class="row">
                                     <div class="col">
-                                        <span class="btn btn-miage btn-lg" href="javascript:void(0)">
-                                            Se connecter
+                                        <span class="btn btn-miage btn-round btn-lg ml-3 mt-2" href="javascript:void(0)">
+                                            Créer un compte
                                         </span>
                                     </div>
                                     <div class="col">
-                                        <a class="btn btn-miage btn-simple btn-lg" href="javascript:void(0)">
-                                            Rester Anonyme
+                                        <a class="btn btn-miage btn-simple btn-sm mt-3 ml-5" [routerLink]="['/home']">
+                                            Déjà inscrit(e) ?
                                         </a>
                                     </div>
                                 </div>
+                                <br>
                             </div>
-                            <div class="card-footer">
-                                <a class="btn btn-miage btn-simple" [routerLink]="['/register']">
-                                    Pas encore inscrit(e) ?
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>

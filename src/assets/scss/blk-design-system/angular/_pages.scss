@@ -14,7 +14,7 @@
 .section.section-signup {
   .squares,
   .square {
-    @include linear-gradient($miage-states, $white);
+    @include linear-gradient($square-first, $white);
   }
 }
 .footer {

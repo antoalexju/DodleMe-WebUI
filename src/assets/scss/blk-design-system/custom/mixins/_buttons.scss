@@ -132,13 +132,13 @@
     }
 
     &.btn-miage {
-      color: $miage-states;
+      color: $miage-btn-primary;
 
       &:hover,
       &:focus,
       &:active,
       &:active:focus {
-        color: $miage-states;
+        color: $miage-btn-primary;
       }
     }
 
