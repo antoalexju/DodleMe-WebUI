@@ -27,6 +27,8 @@ import { PopoverModule } from "ngx-bootstrap/popover";
 import { IndexComponent } from "./dodle/index/index.component";
 import { RegisterpageComponent } from './dodle/registerpage/registerpage.component';
 import { LoginpageComponent } from './dodle/loginpage/loginpage.component';
+import { FooterComponent } from './dodle/modules/footer/footer.component';
+import { NavbarComponent } from './dodle/modules/navbar/navbar.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { LoginpageComponent } from './dodle/loginpage/loginpage.component';
         // DemoLandingpageComponent
         IndexComponent,
         RegisterpageComponent,
-        LoginpageComponent
+        LoginpageComponent,
+        FooterComponent,
+        NavbarComponent
     ],
     imports: [
         BrowserAnimationsModule,
