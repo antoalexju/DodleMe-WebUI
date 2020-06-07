@@ -71,11 +71,11 @@
                             <div class="card-header">
                                 <img
                                         alt="Card image"
-                                        class="card-img"
+                                        class="card-img-evt"
                                         src="assets/img/header1.jpg"
                                 />
+                                <h2 class="card-title">Créer un événement</h2>
 
-                                <h4 class="card-title">Bienvenue</h4>
                             </div>
                             <div class="card-body">
                                 <form class="form">
@@ -83,50 +83,47 @@
                                     <div class="input-group" [ngClass]="{ 'input-group-focus': focus === true }">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <i class="tim-icons icon-single-02"> </i>
+                                                <i class="tim-icons icon-book-bookmark"> </i>
                                             </div>
                                         </div>
-                                        <input class="form-control" placeholder="Prénom" type="text" (focus)="focus = true" (blur)="focus = false"/>
+                                        <input class="form-control" placeholder="Nom de l'événement" type="text" (focus)="focus = true" (blur)="focus = false"/>
                                     </div>
 
                                     <div class="input-group" [ngClass]="{ 'input-group-focus': focus1 === true }">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <i class="tim-icons icon-single-02"> </i>
+                                                <i class="tim-icons icon-square-pin"> </i>
                                             </div>
                                         </div>
-                                        <input class="form-control" placeholder="Nom" type="text" (focus)="focus1 = true" (blur)="focus1 = false"/>
+                                        <input class="form-control" placeholder="Lieu de l'événement" type="text" (focus)="focus1 = true" (blur)="focus1 = false"/>
                                     </div>
 
                                     <div class="input-group" [ngClass]="{ 'input-group-focus': focus2 === true }">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <i class="tim-icons icon-single-02"> </i>
+                                                <i class="tim-icons icon-notes"> </i>
                                             </div>
                                         </div>
-                                        <input class="form-control" placeholder="Email" type="text" (focus)="focus2 = true" (blur)="focus2 = false"/>
+                                        <input class="form-control" placeholder="Description" type="text" (focus)="focus2 = true" (blur)="focus2 = false"/>
                                     </div>
-
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="input-group" [ngClass]="{ 'input-group-focus': focus3 === true }">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text">
-                                                        <i class="tim-icons icon-lock-circle"> </i>
-                                                    </div>
-                                                </div>
-                                                <input class="form-control" placeholder="Password" type="password" (focus)="focus3 = true" (blur)="focus3 = false"/>
+                                    <small class="text-muted">Date de clôture</small>
+                                    <div class="input-group" [ngClass]="{ ' input-group-focus': focus3=== true}">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="tim-icons icon-calendar-60"></i>
                                             </div>
+                                            <input class="form-control" type="date" (focus)="focus3 = true" (blur)="focus3 = false"/>
                                         </div>
-                                        <div class="col">
-                                            <div class="input-group" [ngClass]="{ 'input-group-focus': focus4 === true }">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text">
-                                                        <i class="tim-icons icon-single-02"> </i>
-                                                    </div>
-                                                </div>
-                                                <input class="form-control" placeholder="Confirmer le mot de passe" type="password" (focus)="focus4 = true" (blur)="focus4 = false"/>
-                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                Evénement privé
+                                                    <span class="form-check-sign">
+                                                        <span class="check"></span>
+                                                    </span>
+                                            </label>
                                         </div>
                                     </div>
                                 </form>
@@ -134,12 +131,12 @@
                                 <div class="row">
                                     <div class="col">
                                         <span class="btn btn-miage btn-round btn-lg ml-3 mt-2" href="javascript:void(0)">
-                                            Créer un compte
+                                            Créer l'événement
                                         </span>
                                     </div>
                                     <div class="col">
-                                        <a class="btn btn-miage btn-simple btn-sm mt-3 ml-5" [routerLink]="['/login']">
-                                            Déjà inscrit(e) ?
+                                        <a class="btn btn-miage btn-simple btn-sm mt-3 ml-5" [routerLink]="['/home']">
+                                           Annuler
                                         </a>
                                     </div>
                                 </div>
@@ -162,4 +159,34 @@
     <footer class="footer">
     </footer>
 </div>
+<!--
+<div class="section section-tabs">
+    <div class="container">
+        <div class="title"><h3 class="mb-3">Consulter mes événements</h3></div>
+        <div class="row">
+            <div class="col-md-10 ml-auto col-xl-6 mr-auto">
+                <div class="mb-3">
+                    <small class="text-uppercase font-weight-bold"> With text </small>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <tabset class="nav-tabs-danger">
+                            <tab heading="Evénements créés">
+                                <p>
+                                    Ici, on retrouvera le tableau des évènements créés par l'utilisateur. <br />
 
+                                   Un utilisateur anonyme ne pourra pas consulter cette page, normalement.
+                                </p>
+                            </tab>
+                            <tab heading="Evénements participés">
+                                <p>
+                                   Ici, il y aura les événements auxquels l'utilisateur a répondu.
+                                </p>
+                            </tab>
+                        </tabset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->

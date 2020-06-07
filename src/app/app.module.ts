@@ -29,6 +29,8 @@ import { RegisterpageComponent } from './dodle/registerpage/registerpage.compone
 import { LoginpageComponent } from './dodle/loginpage/loginpage.component';
 import { FooterComponent } from './dodle/modules/footer/footer.component';
 import { NavbarComponent } from './dodle/modules/navbar/navbar.component';
+import { EvtcreatepageComponent } from './dodle/evtcreatepage/evtcreatepage.component';
+import { EvtconsultpageComponent } from './dodle/evtconsultpage/evtconsultpage.component';
 
 
 @NgModule({
@@ -43,7 +45,9 @@ import { NavbarComponent } from './dodle/modules/navbar/navbar.component';
         RegisterpageComponent,
         LoginpageComponent,
         FooterComponent,
-        NavbarComponent
+        NavbarComponent,
+        EvtcreatepageComponent,
+        EvtconsultpageComponent
     ],
     imports: [
         BrowserAnimationsModule,

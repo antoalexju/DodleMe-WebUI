@@ -11,6 +11,14 @@
     width: 450px;
   }
 
+  .card-header-evt img {
+    position: absolute;
+    margin-left: -50px;
+    margin-top: -280px;
+    border-radius: 20%;
+    width: 450px;
+  }
+
   .header {
     margin-left: 20px;
     margin-right: 20px;
@@ -59,12 +67,12 @@
   }
 
   //Personalised
-  /*.card-img-miage {
+  card-img-evt {
     position:absolute;
     left: 0;
-    top: -5%
-    width: 70%
-  }*/
+    top: -5%;
+    width: 70%;
+  }
 
   .social-line {
     margin-top: 20px;

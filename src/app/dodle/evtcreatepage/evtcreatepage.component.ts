@@ -1,11 +1,12 @@
 import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 
 @Component({
-  selector: 'app-registerpage',
-  templateUrl: './registerpage.component.html',
-  styleUrls: ['./registerpage.component.scss']
+  selector: 'app-evtcreatepage',
+  templateUrl: './evtcreatepage.component.html',
+  styleUrls: ['./evtcreatepage.component.scss']
 })
-export class RegisterpageComponent implements OnInit, OnDestroy {
+export class EvtcreatepageComponent implements OnInit, OnDestroy {
+
   isCollapsed = true;
   focus: boolean;
   focus1: boolean;
@@ -80,12 +81,13 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     var body = document.getElementsByTagName("body")[0];
-    body.classList.add("register-page");
+    body.classList.add("evtcreate-page");
 
     this.onMouseMove(event);
   }
   ngOnDestroy() {
     var body = document.getElementsByTagName("body")[0];
-    body.classList.remove("register-page");
+    body.classList.remove("evtcreate-page");
   }
+
 }
