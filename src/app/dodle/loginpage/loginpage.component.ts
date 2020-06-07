@@ -7,6 +7,7 @@ import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 export class LoginpageComponent implements OnInit, OnDestroy {
   focus: boolean;
   focus1: boolean;
+  isCollapsed: boolean;
   constructor() {}
   @HostListener("document:mousemove", ["$event"])
   onMouseMove(e) {
