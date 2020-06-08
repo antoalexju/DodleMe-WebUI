@@ -1,11 +1,11 @@
 import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 
 @Component({
-  selector: 'app-evtcreatepage',
-  templateUrl: './evtcreatepage.component.html',
-  styleUrls: ['./evtcreatepage.component.scss']
+  selector: 'app-createpage',
+  templateUrl: './createpage.component.html',
+  styleUrls: ['./createpage.component.scss']
 })
-export class EvtcreatepageComponent implements OnInit, OnDestroy {
+export class CreatepageComponent implements OnInit, OnDestroy {
 
   isCollapsed = true;
   focus: boolean;

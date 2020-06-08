@@ -6,19 +6,19 @@ import { Routes, RouterModule } from "@angular/router";
 import { IndexComponent } from "./dodle/index/index.component";
 import { LoginpageComponent } from "./dodle/loginpage/loginpage.component";
 import { RegisterpageComponent } from "./dodle/registerpage/registerpage.component";
-import {EvtcreatepageComponent} from "./dodle/evtcreatepage/evtcreatepage.component";
+import {CreatepageComponent} from "./dodle/events/createpage/createpage.component";
 import {componentFactoryName} from "@angular/compiler";
-import {EvtconsultpageComponent} from "./dodle/evtconsultpage/evtconsultpage.component";
-import {EvtanswerpageComponent} from "./dodle/evtanswerpage/evtanswerpage.component";
+import {OverviewpageComponent} from "./dodle/events/overviewpage/overviewpage.component";
+import {AnswerpageComponent} from "./dodle/events/answerpage/answerpage.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "home", component: IndexComponent },
   { path: "login", component:LoginpageComponent },
   { path: "register", component:RegisterpageComponent },
-  { path: "createevt", component:EvtcreatepageComponent},
-  { path: "consultevt", component:EvtconsultpageComponent},
-  { path : "answerevt", component: EvtanswerpageComponent},
+  { path: "createevt", component:CreatepageComponent},
+  { path: "consultevt", component:OverviewpageComponent},
+  { path : "answerevt", component: AnswerpageComponent},
 ];
 
 @NgModule({

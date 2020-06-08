@@ -29,11 +29,11 @@ import { RegisterpageComponent } from './dodle/registerpage/registerpage.compone
 import { LoginpageComponent } from './dodle/loginpage/loginpage.component';
 import { FooterComponent } from './dodle/modules/footer/footer.component';
 import { NavbarComponent } from './dodle/modules/navbar/navbar.component';
-import { EvtcreatepageComponent } from './dodle/evtcreatepage/evtcreatepage.component';
-import { EvtconsultpageComponent } from './dodle/evtconsultpage/evtconsultpage.component';
+import { CreatepageComponent } from './dodle/events/createpage/createpage.component';
+import { OverviewpageComponent } from './dodle/events/overviewpage/overviewpage.component';
 import { ConsulteventlistComponent } from './dodle/events/consulteventlist/consulteventlist.component';
 import { CreatedevtlistComponent } from './dodle/events/createdevtlist/createdevtlist.component';
-import { EvtanswerpageComponent } from './dodle/evtanswerpage/evtanswerpage.component';
+import { AnswerpageComponent } from './dodle/events/answerpage/answerpage.component';
 import { TimeeventlistComponent } from './dodle/events/timeeventlist/timeeventlist.component';
 
 
@@ -50,11 +50,11 @@ import { TimeeventlistComponent } from './dodle/events/timeeventlist/timeeventli
         LoginpageComponent,
         FooterComponent,
         NavbarComponent,
-        EvtcreatepageComponent,
-        EvtconsultpageComponent,
+        CreatepageComponent,
+        OverviewpageComponent,
         ConsulteventlistComponent,
         CreatedevtlistComponent,
-        EvtanswerpageComponent,
+        AnswerpageComponent,
         TimeeventlistComponent
     ],
     imports: [

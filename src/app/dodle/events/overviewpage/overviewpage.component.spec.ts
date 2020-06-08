@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EvtconsultpageComponent } from './evtconsultpage.component';
+import { OverviewpageComponent } from './overviewpage.component';
 
 describe('EvtconsultpageComponent', () => {
-  let component: EvtconsultpageComponent;
-  let fixture: ComponentFixture<EvtconsultpageComponent>;
+  let component: OverviewpageComponent;
+  let fixture: ComponentFixture<OverviewpageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EvtconsultpageComponent ]
+      declarations: [ OverviewpageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EvtconsultpageComponent);
+    fixture = TestBed.createComponent(OverviewpageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
