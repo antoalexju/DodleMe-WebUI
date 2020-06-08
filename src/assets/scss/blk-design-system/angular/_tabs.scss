@@ -23,6 +23,11 @@
   color: $success;
 }
 
+.nav-tabs-miage .nav-tabs > .nav-item > .nav-link.active {
+  border-color: $nav-tabs-miage;
+  color: $nav-tabs-miage;
+}
+
 tabset .tab-content {
   padding: 20px 0 0;
 }

@@ -106,4 +106,15 @@
       }
     }
   }
+
+  &.nav-tabs-miage {
+    > .nav-item {
+      > .nav-link {
+        &.active {
+          border-color: $nav-tabs-miage;
+          color: $nav-tabs-miage;
+        }
+      }
+    }
+  }
 }

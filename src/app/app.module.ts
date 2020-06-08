@@ -31,6 +31,10 @@ import { FooterComponent } from './dodle/modules/footer/footer.component';
 import { NavbarComponent } from './dodle/modules/navbar/navbar.component';
 import { EvtcreatepageComponent } from './dodle/evtcreatepage/evtcreatepage.component';
 import { EvtconsultpageComponent } from './dodle/evtconsultpage/evtconsultpage.component';
+import { ConsulteventlistComponent } from './dodle/events/consulteventlist/consulteventlist.component';
+import { CreatedevtlistComponent } from './dodle/events/createdevtlist/createdevtlist.component';
+import { EvtanswerpageComponent } from './dodle/evtanswerpage/evtanswerpage.component';
+import { TimeeventlistComponent } from './dodle/events/timeeventlist/timeeventlist.component';
 
 
 @NgModule({
@@ -47,7 +51,11 @@ import { EvtconsultpageComponent } from './dodle/evtconsultpage/evtconsultpage.c
         FooterComponent,
         NavbarComponent,
         EvtcreatepageComponent,
-        EvtconsultpageComponent
+        EvtconsultpageComponent,
+        ConsulteventlistComponent,
+        CreatedevtlistComponent,
+        EvtanswerpageComponent,
+        TimeeventlistComponent
     ],
     imports: [
         BrowserAnimationsModule,
