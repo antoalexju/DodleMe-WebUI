@@ -1,11 +1,11 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  selector: 'app-navbarlite',
+  templateUrl: './navbarlite.component.html',
+  styleUrls: ['./navbarlite.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarliteComponent implements OnInit {
   isCollapsed: boolean;
 
   constructor() { }

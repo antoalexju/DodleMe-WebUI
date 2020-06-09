@@ -19,23 +19,7 @@ export class AppComponent implements OnInit {
     public location: Location,
     @Inject(DOCUMENT) document
   ) {}
-  @HostListener("window:scroll", ["$event"])
-  onWindowScroll(e) {
-    var element = document.getElementById("navbar-top");
-    if (window.pageYOffset > 100) {
-      if (element) {
-        element.classList.remove("navbar-transparent");
-        element.classList.add("bg-danger");
-      }
-    } else {
-      if (element) {
-        element.classList.add("navbar-transparent");
-        element.classList.remove("bg-danger");
-      }
-    }
-  }
-
+  
   ngOnInit() {
-    this.onWindowScroll(event);
   }
 }

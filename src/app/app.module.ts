@@ -5,7 +5,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
 
-import {EventlistComponent} from "./dodle/events/eventlist/eventlist.component";
+import {EventlistComponent} from "./dodle/events/modules/eventlist/eventlist.component";
 
 import { BrowserModule } from "@angular/platform-browser";
 import { CommonModule } from "@angular/common";
@@ -31,10 +31,13 @@ import { FooterComponent } from './dodle/modules/footer/footer.component';
 import { NavbarComponent } from './dodle/modules/navbar/navbar.component';
 import { CreatepageComponent } from './dodle/events/createpage/createpage.component';
 import { OverviewpageComponent } from './dodle/events/overviewpage/overviewpage.component';
-import { ConsulteventlistComponent } from './dodle/events/consulteventlist/consulteventlist.component';
-import { CreatedevtlistComponent } from './dodle/events/createdevtlist/createdevtlist.component';
+import { ConsulteventlistComponent } from './dodle/events/modules/consulteventlist/consulteventlist.component';
+import { CreatedeventsComponent } from './dodle/events/modules/createdevents/createdevents.component';
 import { AnswerpageComponent } from './dodle/events/answerpage/answerpage.component';
 import { TimeeventlistComponent } from './dodle/events/timeeventlist/timeeventlist.component';
+import { NavbarliteComponent } from './dodle/modules/navbarlite/navbarlite.component';
+import { ScuaresComponent } from './dodle/modules/scuares/scuares.component';
+import { CardComponent } from './dodle/modules/card/card.component';
 
 
 @NgModule({
@@ -53,9 +56,12 @@ import { TimeeventlistComponent } from './dodle/events/timeeventlist/timeeventli
         CreatepageComponent,
         OverviewpageComponent,
         ConsulteventlistComponent,
-        CreatedevtlistComponent,
+        CreatedeventsComponent,
         AnswerpageComponent,
-        TimeeventlistComponent
+        TimeeventlistComponent,
+        NavbarliteComponent,
+        ScuaresComponent,
+        CardComponent
     ],
     imports: [
         BrowserAnimationsModule,

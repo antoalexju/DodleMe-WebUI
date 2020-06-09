@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CreatedevtlistComponent } from './createdevtlist.component';
+import { NavbarliteComponent } from './navbarlite.component';
 
-describe('CreatedevtlistComponent', () => {
-  let component: CreatedevtlistComponent;
-  let fixture: ComponentFixture<CreatedevtlistComponent>;
+describe('NavbarliteComponent', () => {
+  let component: NavbarliteComponent;
+  let fixture: ComponentFixture<NavbarliteComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreatedevtlistComponent ]
+      declarations: [ NavbarliteComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CreatedevtlistComponent);
+    fixture = TestBed.createComponent(NavbarliteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

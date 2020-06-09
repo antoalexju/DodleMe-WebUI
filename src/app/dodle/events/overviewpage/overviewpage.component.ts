@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./overviewpage.component.scss']
 })
 export class OverviewpageComponent implements OnInit {
+    isCollapsed: boolean;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    var body = document.getElementsByTagName("body")[0];
+    body.classList.add("overviewpage-page");
+  }
+  ngOnDestroy() {
+    var body = document.getElementsByTagName("body")[0];
+    body.classList.remove("overviewpage-page");
   }
 
 }
