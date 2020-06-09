@@ -30,9 +30,9 @@ import { LoginpageComponent } from './dodle/loginpage/loginpage.component';
 import { FooterComponent } from './dodle/modules/footer/footer.component';
 import { NavbarComponent } from './dodle/modules/navbar/navbar.component';
 import { CreatepageComponent } from './dodle/events/createpage/createpage.component';
-import { OverviewpageComponent } from './dodle/events/overviewpage/overviewpage.component';
-import { ConsulteventlistComponent } from './dodle/events/modules/consulteventlist/consulteventlist.component';
-import { CreatedeventsComponent } from './dodle/events/modules/createdevents/createdevents.component';
+import { OverviewpageComponent } from './dodle/user/overviewpage/overviewpage.component';
+import { UsereventsComponent } from './dodle/user/modules/userevents/userevents.component';
+import { CreatedeventsComponent } from './dodle/user/modules/createdevents/createdevents.component';
 import { AnswerpageComponent } from './dodle/events/answerpage/answerpage.component';
 import { TimeeventlistComponent } from './dodle/events/timeeventlist/timeeventlist.component';
 import { NavbarliteComponent } from './dodle/modules/navbarlite/navbarlite.component';
@@ -55,7 +55,7 @@ import { CardComponent } from './dodle/modules/card/card.component';
         NavbarComponent,
         CreatepageComponent,
         OverviewpageComponent,
-        ConsulteventlistComponent,
+        UsereventsComponent,
         CreatedeventsComponent,
         AnswerpageComponent,
         TimeeventlistComponent,

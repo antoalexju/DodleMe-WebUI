@@ -7,7 +7,7 @@ import { IndexComponent } from "./dodle/index/index.component";
 import { LoginpageComponent } from "./dodle/loginpage/loginpage.component";
 import { RegisterpageComponent } from "./dodle/registerpage/registerpage.component";
 import {CreatepageComponent} from "./dodle/events/createpage/createpage.component";
-import {OverviewpageComponent} from "./dodle/events/overviewpage/overviewpage.component";
+import {OverviewpageComponent} from "./dodle/user/overviewpage/overviewpage.component";
 import {AnswerpageComponent} from "./dodle/events/answerpage/answerpage.component";
 
 const routes: Routes = [
@@ -20,8 +20,13 @@ const routes: Routes = [
     path: "event",
     children: [
       { path: "create", component:CreatepageComponent},
-      { path: "overview", component:OverviewpageComponent},
       { path: "answer", component:AnswerpageComponent},
+    ]
+  },
+  {
+    path: "user",
+    children: [
+      { path: "events", component:OverviewpageComponent},
     ]
   },
   { path: '**', redirectTo: "home", pathMatch: "full" }
