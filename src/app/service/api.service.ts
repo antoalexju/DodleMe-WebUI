@@ -9,7 +9,7 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  API_KEY = '4Rm96eNRz'; //return this.httpClient.get(`http://77.207.28.177/api/event/list&key=${this.API_KEY}`);
+  API_KEY = '4Rm96eNRz'; // return this.httpClient.get(`http://77.207.28.177/api/event/list&key=${this.API_KEY}`);
   API_URL = 'http://localhost/api';
 
   /**
@@ -27,7 +27,7 @@ export class ApiService {
 
 }
 
-class _Event {
+export class _Event {
 
    title: string;
    creator: number;

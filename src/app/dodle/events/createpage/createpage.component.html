@@ -15,15 +15,14 @@
 
                             </div>
                             <div class="card-body">
-                                <form class="form">
-
+                                <form class="form" (submit)="onSubmit()" >
                                     <div class="input-group" [ngClass]="{ 'input-group-focus': focus === true }">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
                                                 <i class="tim-icons icon-book-bookmark"> </i>
                                             </div>
                                         </div>
-                                        <input class="form-control" placeholder="Nom de l'événement" type="text" (focus)="focus = true" (blur)="focus = false"/>
+                                        <input class="form-control" [(ngModel)]="title" placeholder="Nom de l'événement" type="text" (focus)="focus = true" (blur)="focus = false"/>
                                     </div>
 
                                     <div class="input-group" [ngClass]="{ 'input-group-focus': focus1 === true }">
@@ -32,7 +31,7 @@
                                                 <i class="tim-icons icon-square-pin"> </i>
                                             </div>
                                         </div>
-                                        <input class="form-control" placeholder="Lieu de l'événement" type="text" (focus)="focus1 = true" (blur)="focus1 = false"/>
+                                        <input class="form-control" [(ngModel)]="location" placeholder="Lieu de l'événement" type="text" (focus)="focus1 = true" (blur)="focus1 = false"/>
                                     </div>
 
                                     <div class="input-group" [ngClass]="{ 'input-group-focus': focus2 === true }">
@@ -41,7 +40,7 @@
                                                 <i class="tim-icons icon-notes"> </i>
                                             </div>
                                         </div>
-                                        <input class="form-control" placeholder="Description" type="text" (focus)="focus2 = true" (blur)="focus2 = false"/>
+                                        <input class="form-control" [(ngModel)]="description" placeholder="Description" type="text" (focus)="focus2 = true" (blur)="focus2 = false"/>
                                     </div>
                                     <small class="text-muted">Date de clôture</small>
                                     <div class="input-group" [ngClass]="{ ' input-group-focus': focus3=== true}">
@@ -49,7 +48,7 @@
                                             <div class="input-group-text">
                                                 <i class="tim-icons icon-calendar-60"></i>
                                             </div>
-                                            <input class="form-control" type="date" (focus)="focus3 = true" (blur)="focus3 = false"/>
+                                            <input class="form-control" [(ngModel)]="limitDate" type="date" (focus)="focus3 = true" (blur)="focus3 = false"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -58,7 +57,7 @@
                                                 <input class="form-check-input" type="checkbox" value="">
                                                 Evénement privé
                                                     <span class="form-check-sign">
-                                                        <span class="check"></span>
+                                                        <span class="check" [(ngModel)]="private"></span>
                                                     </span>
                                             </label>
                                         </div>
@@ -67,7 +66,7 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col">
-                                        <span class="btn btn-miage btn-round btn-lg ml-3 mt-2" [routerLink]="['/event/overview']">
+                                        <span class="btn btn-miage btn-round btn-lg ml-3 mt-2" [routerLink]="['/event/overview']" (click)="onSubmit()">
                                             Créer l'événement
                                         </span>
                                     </div>
@@ -79,7 +78,6 @@
                                 </div>
                                 <br>
                             </div>
-
                         </div>
                     </div>
                 </div>
