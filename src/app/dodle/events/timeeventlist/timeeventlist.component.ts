@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./timeeventlist.component.scss']
 })
 export class TimeeventlistComponent implements OnInit {
+  focus: boolean;
+  submitted: false;
 
   constructor() { }
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -20,9 +20,25 @@ export class ApiService {
     return this.httpClient.get(this.API_URL + '/event/list');
   }
 
-  public createEvent(event: _Event): Observable<_Event>{
+    public getEvent(id: string){
 
-    return this.httpClient.post<_Event>(this.API_URL + '/event/create', event);
+        return this.httpClient.get(this.API_URL + '/event/'+ id);
+    }
+
+  public createEvent(event: _Event): Observable<any>{
+
+      event.creator = 1;
+      event.linkId = 'test';
+      event.status = "openned";
+      event.finalDate = '2020-06-10 00:00:00';
+
+      const httpOptions = {
+          headers: new HttpHeaders({
+              'Content-Type':  'application/json',
+          })
+      };
+
+      return this.httpClient.post(this.API_URL + '/event/create', JSON.stringify(event), httpOptions);
   }
 
 }
@@ -37,5 +53,7 @@ export class _Event {
    limitDate: string;
    isPrivate: boolean;
    linkId: string;
+   status: string;
+   finalDate: string;
 }
 
