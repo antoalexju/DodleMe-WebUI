@@ -20,13 +20,15 @@ const routes: Routes = [
     path: "event",
     children: [
       { path: "create", component:CreatepageComponent},
-      { path: "answer", component:AnswerpageComponent},
+      { path: ":id", component:AnswerpageComponent},
     ]
   },
   {
     path: "user",
     children: [
       { path: "events", component:OverviewpageComponent},
+      { path: "overview", component:OverviewpageComponent},
+      { path: "answer", component:AnswerpageComponent},
     ]
   },
   { path: '**', redirectTo: "home", pathMatch: "full" }

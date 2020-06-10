@@ -10,98 +10,14 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>Pot de départ d'Anna</td>
-        <td>Laurent</td>
-        <td>10</td>
-        <td>25 juin 2020</td>
-        <td>4 août 2020</td>
+    <tr *ngFor="let event of eventList">
+        <td>{{event.title}}</td>
+        <td>{{event.creatorname}}</td>
+        <td>{{event.participants}}</td>
+        <td>{{event.begin}}</td>
+        <td>{{event.end}}</td>
         <td class="td-actions text-right">
-            <button type="button" rel="tooltip" class="btn btn-neutral btn-sm" [routerLink]="['/event/answer']">
-                <i class="tim-icons icon-single-02 mr-1"></i> Participer
-            </button>
-        </td>
-    </tr>
-    <tr>
-        <td>Pot de départ d'Anna</td>
-        <td>Laurent</td>
-        <td>10</td>
-        <td>25 juin 2020</td>
-        <td>4 août 2020</td>
-        <td class="td-actions text-right">
-            <button type="button" rel="tooltip" class="btn btn-neutral btn-sm" [routerLink]="['/event/answer']">
-                <i class="tim-icons icon-single-02 mr-1"></i> Participer
-            </button>
-        </td>
-    </tr>
-    <tr>
-        <td>Pot de départ d'Anna</td>
-        <td>Laurent</td>
-        <td>10</td>
-        <td>25 juin 2020</td>
-        <td>4 août 2020</td>
-        <td class="td-actions text-right">
-            <button type="button" rel="tooltip" class="btn btn-neutral btn-sm" [routerLink]="['/event/answer']">
-                <i class="tim-icons icon-single-02 mr-1"></i> Participer
-            </button>
-        </td>
-    </tr>
-    <tr>
-        <td>Pot de départ d'Anna</td>
-        <td>Laurent</td>
-        <td>10</td>
-        <td>25 juin 2020</td>
-        <td>4 août 2020</td>
-        <td class="td-actions text-right">
-            <button type="button" rel="tooltip" class="btn btn-neutral btn-sm" [routerLink]="['/event/answer']">
-                <i class="tim-icons icon-single-02 mr-1"></i> Participer
-            </button>
-        </td>
-    </tr>
-    <tr>
-        <td>Pot de départ d'Anna</td>
-        <td>Laurent</td>
-        <td>10</td>
-        <td>25 juin 2020</td>
-        <td>4 août 2020</td>
-        <td class="td-actions text-right">
-            <button type="button" rel="tooltip" class="btn btn-neutral btn-sm" [routerLink]="['/event/answer']">
-                <i class="tim-icons icon-single-02 mr-1"></i> Participer
-            </button>
-        </td>
-    </tr>
-    <tr>
-        <td>Pot de départ d'Anna</td>
-        <td>Laurent</td>
-        <td>10</td>
-        <td>25 juin 2020</td>
-        <td>4 août 2020</td>
-        <td class="td-actions text-right">
-            <button type="button" rel="tooltip" class="btn btn-neutral btn-sm" [routerLink]="['/event/answer']">
-                <i class="tim-icons icon-single-02 mr-1"></i> Participer
-            </button>
-        </td>
-    </tr>
-    <tr>
-        <td>Pot de départ d'Anna</td>
-        <td>Laurent</td>
-        <td>10</td>
-        <td>25 juin 2020</td>
-        <td>4 août 2020</td>
-        <td class="td-actions text-right">
-            <button type="button" rel="tooltip" class="btn btn-neutral btn-sm" [routerLink]="['/event/answer']">
-                <i class="tim-icons icon-single-02 mr-1"></i> Participer
-            </button>
-        </td>
-    </tr>
-    <tr>
-        <td>Pot de départ d'Anna</td>
-        <td>Laurent</td>
-        <td>10</td>
-        <td>25 juin 2020</td>
-        <td>4 août 2020</td>
-        <td class="td-actions text-right">
-            <button type="button" rel="tooltip" class="btn btn-neutral btn-sm" [routerLink]="['/answerevt']">
+            <button type="button" rel="tooltip" class="btn btn-neutral btn-sm" [routerLink]="['/event/' + event.linkId]">
                 <i class="tim-icons icon-single-02 mr-1"></i> Participer
             </button>
         </td>

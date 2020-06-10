@@ -1,4 +1,5 @@
 import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
+import {ApiService} from "../../../service/api.service";
 
 @Component({
   selector: 'app-createpage',
@@ -13,7 +14,7 @@ export class CreatepageComponent implements OnInit, OnDestroy {
   focus2: boolean;
   focus3: boolean;
 
-  constructor() {}
+  constructor(private apiService: ApiService) {}
 
   ngOnInit() {
     var body = document.getElementsByTagName("body")[0];
@@ -23,5 +24,7 @@ export class CreatepageComponent implements OnInit, OnDestroy {
     var body = document.getElementsByTagName("body")[0];
     body.classList.remove("evtcreate-page");
   }
+
+
 
 }
