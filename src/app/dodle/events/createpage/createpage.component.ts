@@ -79,9 +79,6 @@ export class CreatepageComponent implements OnInit, OnDestroy {
           event => {
             console.log(event);
             this.router.navigate(['/event/' + event.idEvent]);
-            this.router.navigate(['/event/' + event.idEvent], {
-              queryParams: { userId: event.idEvent }
-            });
           },
           err => {
             console.error(err);
