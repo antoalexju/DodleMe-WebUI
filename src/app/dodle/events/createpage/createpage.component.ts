@@ -1,7 +1,7 @@
 import {Component, OnInit, OnDestroy, HostListener, NgModule} from '@angular/core';
 import {ApiService,_Event} from "../../../service/api.service";
-import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
-import {BrowserModule} from "@angular/platform-browser";
+import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {BrowserModule} from '@angular/platform-browser';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 

@@ -24,6 +24,12 @@ export class ApiService {
 
         return this.httpClient.get(this.API_URL + '/event/'+ id);
     }
+     /**
+     Récupérer la liste des créneaux associés à un event
+     */
+    /*public getTimeList(id: string){
+        return this.httpClient.get(this.API_URL + '/event/'+ id+'/time');
+    }*/
 
   public createEvent(event: _Event): Observable<any>{
 
@@ -55,5 +61,11 @@ export class _Event {
    linkId: string;
    status: string;
    finalDate: string;
+}
+
+export class _Time {
+    idTime: number;
+    beginDate: string;
+    endDate: string;
 }
 

@@ -7,9 +7,9 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>15/06/2020</td>
-        <td>17/06/2020</td>
+    <tr *ngFor="let time of timeList">
+        <td>{{time.beginDate}}</td>
+        <td>{{time.endDate}}</td>
         <td class="td-actions text-right">
             <div class="form-check">
                 <label class="form-check-label">
@@ -17,33 +17,6 @@
                     <span class="form-check-sign">
             <span class="check"></span>
         </span>
-                </label>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>14/06/2020</td>
-        <td>15/06/2020</td>
-        <td class="td-actions text-right">
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="">
-                    <span class="form-check-sign">
-            <span class="check"></span>
-        </span>
-                </label>
-            </div>
-        </td>
-    </tr><tr>
-        <td>17/06/2020</td>
-        <td>18/06/2020</td>
-        <td class="td-actions text-right">
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="">
-                    <span class="form-check-sign">
-                        <span class="check"></span>
-                    </span>
                 </label>
             </div>
         </td>
