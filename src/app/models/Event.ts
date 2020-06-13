@@ -1,15 +1,16 @@
 import {Time} from "./Time";
 
 export class _Event {
+    idEvent:number;
+    creator:number;
+    linkId:string;
     title: string;
-    creator: number;
+    location:string;
+    description:string;
+    limitDate:string;
+    status:string;
+    isPrivate:boolean;
     participants: number;
-    location: string;
-    description: string;
-    limitDate: string;
-    isPrivate: boolean;
-    linkId: string;
-    status: string;
     finalDate: string;
     times: Time[];
     begin: string;

@@ -12,8 +12,8 @@ export class AnswerpageComponent implements OnInit {
   isCollapsed: boolean;
   focus1: boolean;
   focus2: boolean;
-
-  event: _Event = new _Event();
+//rajouter new Event()
+  event: _Event;
   focus: boolean;
 
   constructor(
@@ -24,6 +24,7 @@ export class AnswerpageComponent implements OnInit {
   ngOnInit() {
     this.apiService.getEvent(this.route.snapshot.paramMap.get('id')).subscribe((evt) =>{
       console.log(evt);
+      this.event = evt;
     });
   }
 

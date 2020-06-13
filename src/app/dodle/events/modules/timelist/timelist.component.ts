@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Time} from "../../../../models/Time";
 import {ApiService} from "../../../../services/api/api.service";
+import{ _Event } from "../../../../models/Event";
 
 
 @Component({
@@ -11,17 +12,17 @@ import {ApiService} from "../../../../services/api/api.service";
 })
 export class TimelistComponent implements OnInit {
 
-  event;
+  public event: _Event;
   focus: boolean;
   submitted: false;
   timeList: Time[];
 
-  constructor(private apiService : ApiService, private route: ActivatedRoute) { }
+  constructor(private apiService : ApiService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.apiService.getEvent(this.route.snapshot.paramMap.get('id')).subscribe((event) =>{
       this.event = event;
-      //this.timeList = event[12];
+      this.timeList = event[12];
     });
 
 
