@@ -1,5 +1,7 @@
 import {Component, OnInit, OnDestroy, HostListener, NgModule} from '@angular/core';
-import {ApiService,_Event} from "../../../service/api.service";
+import {ApiService} from "../../../services/api/api.service";
+import {_Event} from "../../../models/Event";
+
 import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import { NgForm } from '@angular/forms';
@@ -28,18 +30,7 @@ export class CreatepageComponent implements OnInit, OnDestroy {
       private apiService: ApiService,
       private formBuilder: FormBuilder,
       private router: Router
-  ) {
-
-
-  }
-
- /* onSubmit(){
-
-    console.log('$event');
-
-    /*
-
-  }*/
+  ) { }
 
   ngOnInit() {
     const body = document.getElementsByTagName("body")[0];
@@ -78,7 +69,7 @@ export class CreatepageComponent implements OnInit, OnDestroy {
       this.apiService.createEvent(this.event).subscribe(
           event => {
             console.log(event);
-            this.router.navigate(['/event/' + event.idEvent]);
+            this.router.navigate(['/event/' + event.linkId]);
           },
           err => {
             console.error(err);

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from "rxjs";
+import {_Event} from "../../models/Event";
 
 @Injectable({
   providedIn: 'root'
@@ -15,21 +16,13 @@ export class ApiService {
   /**
    * Récupére la liste de evenement grace à l'API
    */
-  public getEventList(){
-
-    return this.httpClient.get(this.API_URL + '/event/list');
+  public getEventList(): Observable<_Event[]>{
+      return this.httpClient.get<_Event[]>(this.API_URL + '/event/list');
   }
 
-    public getEvent(id: string){
-
-        return this.httpClient.get(this.API_URL + '/event/'+ id);
-    }
-     /**
-     Récupérer la liste des créneaux associés à un event
-     */
-    /*public getTimeList(id: string){
-        return this.httpClient.get(this.API_URL + '/event/'+ id+'/time');
-    }*/
+  public getEvent(linkId: string): Observable<_Event>{
+      return this.httpClient.get<_Event>(this.API_URL + '/event/'+ linkId);
+  }
 
   public createEvent(event: _Event): Observable<any>{
 
@@ -47,25 +40,5 @@ export class ApiService {
       return this.httpClient.post(this.API_URL + '/event/create', JSON.stringify(event), httpOptions);
   }
 
-}
-
-export class _Event {
-
-   title: string;
-   creator: number;
-   participants: number;
-   location: string;
-   description: string;
-   limitDate: string;
-   isPrivate: boolean;
-   linkId: string;
-   status: string;
-   finalDate: string;
-}
-
-export class _Time {
-    idTime: number;
-    beginDate: string;
-    endDate: string;
 }
 

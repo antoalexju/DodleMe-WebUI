@@ -34,7 +34,7 @@ import { OverviewpageComponent } from './dodle/user/overviewpage/overviewpage.co
 import { UsereventsComponent } from './dodle/user/modules/userevents/userevents.component';
 import { CreatedeventsComponent } from './dodle/user/modules/createdevents/createdevents.component';
 import { AnswerpageComponent } from './dodle/events/answerpage/answerpage.component';
-import { TimeeventlistComponent } from './dodle/events/timeeventlist/timeeventlist.component';
+import { TimelistComponent } from './dodle/events/modules/timelist/timelist.component';
 import { NavbarliteComponent } from './dodle/modules/navbarlite/navbarlite.component';
 import { ScuaresComponent } from './dodle/modules/scuares/scuares.component';
 import { CardComponent } from './dodle/modules/card/card.component';
@@ -58,7 +58,7 @@ import { CardComponent } from './dodle/modules/card/card.component';
         UsereventsComponent,
         CreatedeventsComponent,
         AnswerpageComponent,
-        TimeeventlistComponent,
+        TimelistComponent,
         NavbarliteComponent,
         ScuaresComponent,
         CardComponent

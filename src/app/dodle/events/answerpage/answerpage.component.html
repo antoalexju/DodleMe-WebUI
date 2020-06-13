@@ -6,9 +6,9 @@
             <div class="container">
                 <div class="row">
                         <app-card>
-                            <div class="title"><h1 class="mb-3">{{this.eventName}}</h1></div>
+                            <div class="title"><h1 class="mb-3">df</h1></div>
                             <!--#TODO lier ici le titre avec le nom de l'événement sélectionné par l'utilisateur sur la page d'accueil-->
-                            <app-timeeventlist></app-timeeventlist>
+                            <app-timelist></app-timelist>
                             <hr>
                             <div class="row">
                                 <div class="col">
@@ -18,7 +18,7 @@
                                                 <i class="tim-icons icon-book-bookmark"> </i>
                                             </div>
                                         </div>
-                                        <input class="form-control" formControlName="alias" placeholder="Votre nom" type="text" (focus)="focus = true" (blur)="focus = false"/>
+                                        <input class="form-control" placeholder="Votre nom" type="text" (focus)="focus = true" (blur)="focus = false"/>
                                     </div>
                                     <button type="button" class="btn btn-miage btn-round btn-lg ml-3 mt-2" [routerLink]="['/home']">
                                         Valider mes choix

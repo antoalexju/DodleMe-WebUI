@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TimeeventlistComponent } from './timeeventlist.component';
+import { TimelistComponent } from './timelist.component';
 
 describe('TimeeventlistComponent', () => {
-  let component: TimeeventlistComponent;
-  let fixture: ComponentFixture<TimeeventlistComponent>;
+  let component: TimelistComponent;
+  let fixture: ComponentFixture<TimelistComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TimeeventlistComponent ]
+      declarations: [ TimelistComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TimeeventlistComponent);
+    fixture = TestBed.createComponent(TimelistComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,25 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import {_Event, _Time, ApiService} from "../../../service/api.service";
 import {ActivatedRoute} from "@angular/router";
+import {Time} from "../../../../models/Time";
+import {ApiService} from "../../../../services/api/api.service";
 
 
 @Component({
-  selector: 'app-timeeventlist',
-  templateUrl: './timeeventlist.component.html',
-  styleUrls: ['./timeeventlist.component.scss']
+  selector: 'app-timelist',
+  templateUrl: './timelist.component.html',
+  styleUrls: ['./timelist.component.scss']
 })
-export class TimeeventlistComponent implements OnInit {
+export class TimelistComponent implements OnInit {
+
   event;
-  timeList: _Time;
   focus: boolean;
   submitted: false;
+  timeList: Time[];
 
   constructor(private apiService : ApiService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.apiService.getEvent(this.route.snapshot.paramMap.get('id')).subscribe((event) =>{
       this.event = event;
-      this.timeList = event[12];
+      //this.timeList = event[12];
     });
 
 

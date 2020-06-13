@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {_Event, ApiService} from "../../../service/api.service";
+import {ApiService} from "../../../services/api/api.service";
+import {_Event} from "../../../models/Event";
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
@@ -12,20 +13,17 @@ export class AnswerpageComponent implements OnInit {
   focus1: boolean;
   focus2: boolean;
 
-  eventName: string;
-  eventTimes: object;
+  event: _Event = new _Event();
+  focus: boolean;
 
   constructor(
       private apiService: ApiService,
-      private route: ActivatedRoute
+      private route: ActivatedRoute,
   ) { }
 
   ngOnInit() {
-    this.apiService.getEvent(this.route.snapshot.paramMap.get('id')).subscribe((event) =>{
-      // @ts-ignore
-      this.eventName = event.title;
-      // @ts-ignore
-      this.eventTimes = event.times;
+    this.apiService.getEvent(this.route.snapshot.paramMap.get('id')).subscribe((evt) =>{
+      console.log(evt);
     });
   }
 
