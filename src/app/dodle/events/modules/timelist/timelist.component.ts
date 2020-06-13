@@ -15,14 +15,12 @@ export class TimelistComponent implements OnInit {
   public event: _Event;
   focus: boolean;
   submitted: false;
-  timeList: Time[];
 
   constructor(private apiService : ApiService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.apiService.getEvent(this.route.snapshot.paramMap.get('id')).subscribe((event) =>{
       this.event = event;
-      this.timeList = event[12];
     });
 
 
