@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from "rxjs";
 import {_Event} from "../../models/Event";
+import {Time} from "../../models/Time";
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +39,15 @@ export class ApiService {
       };
 
       return this.httpClient.post(this.API_URL + '/event/create', JSON.stringify(event), httpOptions);
+  }
+
+  public createTime(time:Time, id:number): Observable<any>{
+
+      const httpOptions = {
+          headers: new HttpHeaders({'Content-Type':'application/json',
+          })
+      };
+      return this.httpClient.post(this.API_URL+'/event/'+id+'/time/create', JSON.stringify(time), httpOptions);
   }
 
 }
