@@ -8,6 +8,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import {Time} from "../../../models/Time";
 import {ModalDirective} from "ngx-bootstrap";
+import {AuthService} from "../../../services/auth/auth.service";
 
 // @ts-ignore
 @Component({
@@ -29,10 +30,15 @@ export class AnswerpageComponent implements OnInit {
       private apiService: ApiService,
       private formBuilder: FormBuilder,
       private route: ActivatedRoute,
-      private router: Router
+      private router: Router,
+      public  auth: AuthService
   ) { }
 
   ngOnInit() {
+
+    var body = document.getElementsByTagName("body")[0];
+    body.classList.add("login-page");
+
     this.apiService.getEvent(this.route.snapshot.paramMap.get('id')).subscribe(
       evt => {
         this.event = evt;

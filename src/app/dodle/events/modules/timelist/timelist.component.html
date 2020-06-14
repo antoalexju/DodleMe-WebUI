@@ -8,8 +8,8 @@
     </thead>
     <tbody>
     <tr *ngFor="let time of times">
-        <td>{{time.beginDate.toLocaleDateString()}}&nbsp;&nbsp;&nbsp;&nbsp;<b>{{time.beginDate.getUTCHours() + 'h' + (time.beginDate.getMinutes() < 10 ? '0' : '') + time.beginDate.getMinutes()}}</b></td>
-        <td>{{time.endDate.toLocaleDateString()}}&nbsp;&nbsp;&nbsp;&nbsp;<b>{{time.endDate.getUTCHours() + 'h' + (time.endDate.getMinutes() < 10 ? '0' : '') + time.endDate.getMinutes()}}</b></td>
+        <td>{{time.beginDate.toLocaleDateString('fr-FR', option)}}&nbsp;&nbsp;&nbsp;&nbsp;<b>{{time.beginDate.getUTCHours() + 'h' + (time.beginDate.getMinutes() < 10 ? '0' : '') + time.beginDate.getMinutes()}}</b></td>
+        <td>{{time.endDate.toLocaleDateString('fr-FR', option)}}&nbsp;&nbsp;&nbsp;&nbsp;<b>{{time.endDate.getUTCHours() + 'h' + (time.endDate.getMinutes() < 10 ? '0' : '') + time.endDate.getMinutes()}}</b></td>
         <td class="td-actions text-right">
             <div class="form-check">
                 <label class="form-check-label">

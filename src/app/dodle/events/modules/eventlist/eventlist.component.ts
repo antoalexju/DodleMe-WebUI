@@ -10,6 +10,7 @@ import {_Event} from "../../../../models/Event";
 export class EventlistComponent implements OnInit {
 
   events: _Event[];
+  option: Intl.DateTimeFormatOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
   constructor(private apiService: ApiService) {}
 

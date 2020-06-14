@@ -33,4 +33,7 @@ export class NavbarComponent implements OnInit {
     this.onWindowScroll();
   }
 
+    logout() {
+        this.auth.logout();
+    }
 }

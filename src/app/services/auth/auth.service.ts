@@ -48,4 +48,9 @@ export class AuthService {
     return this.logged;
   }
 
+  logout() {
+    this.logged = false;
+    this.user = new User();
+    this.identified = false;
+  }
 }

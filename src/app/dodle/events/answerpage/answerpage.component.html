@@ -6,24 +6,24 @@
             <div class="container">
                 <div class="row">
                         <app-card>
-                            <div class="title"><h1 class="mb-3">{{this.event.title}}</h1></div>
+                            <div class="title"><h1 class="mb-3">{{event.title}}</h1></div>
                            <!-- <pre>{{event| json}}</pre>-->
                             <app-timelist></app-timelist>
                             <hr>
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group" [ngClass]="{ 'input-group-focus': focus === true }" >
-                                        <div class="input-group-prepend">
+                                        <div  *ngIf="!auth.isLogged()" class="input-group-prepend">
                                             <div class="input-group-text">
                                                 <i class="tim-icons icon-book-bookmark"> </i>
                                             </div>
                                         </div>
-                                        <input class="form-control" placeholder="Votre nom" type="text" (focus)="focus = true" (blur)="focus = false"/>
+                                        <input  *ngIf="!auth.isLogged()" class="form-control" placeholder="Votre nom" type="text" (focus)="focus = true" (blur)="focus = false"/>
                                     </div>
-                                    <button type="button" class="btn btn-miage btn-round btn-lg mt-2" [routerLink]="['/home']">
+                                    <button *ngIf="!auth.isLogged()" type="button" class="btn btn-miage btn-round btn-lg mt-2" [routerLink]="['/home']">
                                         Valider mes choix
                                     </button>
-                                    <button type="button" class="btn btn-miage btn-simple btn-sm mt-2 ml-5 mr-4" (click)="myModal.show()">
+                                    <button *ngIf="auth.isLogged()" type="button" class="btn btn-miage btn-simple btn-sm mt-2 ml-5 mr-4" (click)="myModal.show()">
                                        Proposer un créneau
                                     </button>
                                 </div>
@@ -52,7 +52,7 @@
                                         <i class="tim-icons icon-calendar-60"> </i>
                                     </span>
                                 </div>
-                                <input class="form-control"   formControlName="dateDeb" type="datetime-local" [ngClass]="{ 'is-invalid': submitted && f.dateDeb.errors }" (focus)="focus1 = true" (blur)="focus1 = false"/>
+                                <input class="form-control" formControlName="dateDeb" type="datetime-local" [ngClass]="{ 'is-invalid': submitted && f.dateDeb.errors }" (focus)="focus1 = true" (blur)="focus1 = false"/>
                                 <div *ngIf="f.dateDeb.errors" class="invalid-feedback" role="alert">Définissez une date de début à votre événement</div>
                             </div>
                         </div>

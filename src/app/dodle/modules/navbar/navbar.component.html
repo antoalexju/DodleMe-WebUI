@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <ul class="navbar-nav" *ngIf="!this.auth.isLogged()">
+            <ul class="navbar-nav" *ngIf="!auth.isLogged()">
                 <li class="nav-item">
                     <a [routerLink]="['/login']" class="nav-link btn btn-default d-none d-lg-block">
                         <i class="tim-icons icon-minimal-right"></i> Connexion
@@ -39,16 +39,16 @@
                     </a>
                 </li>
             </ul>
-            <ul class="navbar-nav" *ngIf="this.auth.isLogged()">
+            <ul class="navbar-nav" *ngIf="auth.isLogged()">
                 <li class="nav-item">
                     <span class="nav-link">
-                        Bonjour, {{this.auth.user.alias}}
+                        Bonjour, {{auth.user.alias}}
                     </span>
                 </li>
                 <li class="nav-item">
-                    <a [routerLink]="['/logout']" class="nav-link btn btn-default d-none d-lg-block">
+                    <button (click)="logout()" class="nav-link btn btn-default d-none d-lg-block">
                         <i class="tim-icons icon-user-run"> </i> Se déconnecter
-                    </a>
+                    </button>
                 </li>
             </ul>
         </div>

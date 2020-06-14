@@ -19,6 +19,7 @@ export class TimelistComponent implements OnInit {
   event: _Event = new _Event();
 
   times: Time[];
+  option: Intl.DateTimeFormatOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };;
 
 
   constructor(private apiService: ApiService,
@@ -42,6 +43,5 @@ export class TimelistComponent implements OnInit {
         i++;
       })
     });
-
   }
 }
