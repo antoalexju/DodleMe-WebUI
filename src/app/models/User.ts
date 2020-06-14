@@ -1,9 +1,9 @@
 export class User {
     idUser: number;
     alias: string;
-    firstname: string;
-    lastname: string;
+    firstName: string;
+    lastName: string;
     mail: string;
-    pass: string
+    password: string
     organisation: string;
 }
