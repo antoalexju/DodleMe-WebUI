@@ -21,7 +21,8 @@
                                                 <i class="tim-icons icon-email-85"> </i>
                                             </div>
                                         </div>
-                                        <input class="form-control" placeholder="Email" formControlName="email" [ngClass]="{ 'is-invalid': submittedLog && g.email.errors }" type="text" (focus)="focus = true" (blur)="focus = false" />
+                                        <input class="form-control" placeholder="Email" formControlName="mail" [ngClass]="{ 'is-invalid': submittedLog && g.mail.errors }" type="text" (focus)="focus = true" (blur)="focus = false" />
+                                        <div *ngIf="g.mail.errors" class="invalid-feedback" role="alert">Veuillez entrer votre email</div>
                                     </div>
                                     <div class="input-group" [ngClass]="{ 'input-group-focus': focus1 === true }">
                                         <div class="input-group-prepend">
@@ -30,7 +31,8 @@
                                             </div>
                                         </div>
                                         <input class="form-control" placeholder="Password" formControlName="password" [ngClass]="{ 'is-invalid': submittedLog && g.password.errors }" type="password" (focus)="focus1 = true" (blur)="focus1 = false" />
-                                    </div>
+                                        <div *ngIf="g.password.errors" class="invalid-feedback" role="alert">Veuillez entrer votre mot de passe</div>
+                                        </div>
                                     <!--
                                     <div class="form-check">
                                         <label class="form-check-label">

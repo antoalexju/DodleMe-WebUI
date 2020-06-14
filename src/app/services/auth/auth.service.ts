@@ -40,8 +40,26 @@ export class AuthService {
     );
   }
 
-  login(User){
-    this.logged = false;
+  login(mail: string, password: string): boolean{
+    this.user.mail = mail;
+    this.user.password = password;
+
+    this.apiService.login(this.user).subscribe(
+        user => {
+          /*
+           * Non fini
+           */
+
+          //this.user.idUser = user.idUser;
+          this.logged = true;
+          this.router.navigate(['/user/overview']).then(r => {});
+        },
+        error => {
+          this.logged = false;
+          return false;
+        }
+    )
+    return false;
   }
 
   isLogged(){

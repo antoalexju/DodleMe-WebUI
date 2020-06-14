@@ -38,7 +38,7 @@ export class LoginpageComponent implements OnInit, OnDestroy {
     });
 
     this.loginForm = this.formBuilder.group({
-      email: ['', Validators.required],
+      mail: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
@@ -53,7 +53,14 @@ export class LoginpageComponent implements OnInit, OnDestroy {
 
   onLoginSubmit() {
     this.submittedLog = true;
-    console.log()
+    if(!this.loginForm.invalid){
+      if(this.auth.login(this.loginForm.value.mail, this.loginForm.value.password)){
+
+      }
+    }
+    else {
+      this.submittedAnon = false;
+    }
   }
 
   async onUsernameSubmit() {
