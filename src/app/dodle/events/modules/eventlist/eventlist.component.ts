@@ -17,6 +17,12 @@ export class EventlistComponent implements OnInit {
 
     this.apiService.getEventList().subscribe((events) =>{
         this.events = events;
+        let i = 0;
+        this.events.forEach(event => {
+          event.begin = new Date(events[i].begin);
+          event.end = new Date(events[i].end);
+          i++;
+        })
     });
   }
 

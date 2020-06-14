@@ -24,13 +24,15 @@ export class ApiService {
   public getEvent(linkId: string): Observable<_Event>{
       return this.httpClient.get<_Event>(this.API_URL + '/event/'+ linkId);
   }
+  public getEventTimes(linkId: string): Observable<Time[]>{
+      return this.httpClient.get<Time[]>(this.API_URL + '/event/'+ linkId + '/time/list');
+  }
 
   public createEvent(event: _Event): Observable<any>{
 
       event.creator = 1;
-      event.linkId = 'test';
       event.status = "openned";
-      event.finalDate = '2020-06-10 00:00:00';
+      event.finalDate = new Date('2020-06-10 00:00:00');
 
       const httpOptions = {
           headers: new HttpHeaders({
@@ -41,13 +43,14 @@ export class ApiService {
       return this.httpClient.post(this.API_URL + '/event/create', JSON.stringify(event), httpOptions);
   }
 
-  public createTime(time:Time, id:number): Observable<any>{
+  public createTime(time: Time, linkId: string): Observable<any>{
 
       const httpOptions = {
           headers: new HttpHeaders({'Content-Type':'application/json',
           })
       };
-      return this.httpClient.post(this.API_URL+'/event/'+id+'/time/create', JSON.stringify(time), httpOptions);
+      
+      return this.httpClient.post(this.API_URL+'/event/' + linkId + '/time/create', JSON.stringify(time), httpOptions);
   }
 
 }

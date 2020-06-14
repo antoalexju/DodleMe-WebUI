@@ -12,18 +12,19 @@
     <tbody>
     <tr *ngFor="let event of events">
         <td>{{event.title}}</td>
-        <td>{{event.creator}}</td>
+        <td>{{event.creatorname}}</td>
         <td>{{event.participants}}</td>
-        <td>{{event.begin}}</td>
-        <td>{{event.end}}</td>
+        <td>{{event.begin.toLocaleDateString()}}</td>
+        <td>{{event.end.toLocaleDateString()}}</td>
         <td class="td-actions text-right">
-            <button type="button" rel="tooltip" class="btn btn-neutral btn-sm" [routerLink]="['/event/' + event.idEvent]">
+            <button type="button" rel="tooltip" class="btn btn-neutral btn-sm" [routerLink]="['/event/' + event.linkId]">
                 <i class="tim-icons icon-single-02 mr-1"></i> Participer
             </button>
         </td>
     </tr>
     </tbody>
 </table>
+<!--
 <nav aria-label="...">
     <ul class="pagination justify-content-end">
         <li class="page-item disabled">
@@ -39,3 +40,4 @@
         </li>
     </ul>
 </nav>
+-->

@@ -1,8 +1,10 @@
 import {Time} from "./Time";
+import {User} from "./User";
 
 export class _Event {
     idEvent:number;
-    creator:number;
+    userCreator: User;
+    creator: number;
     linkId:string;
     title: string;
     location:string;
@@ -11,8 +13,9 @@ export class _Event {
     status:string;
     isPrivate:boolean;
     participants: number;
-    finalDate: string;
+    finalDate: Date;
     times: Time[];
-    begin: string;
-    end: string;
+    begin: Date;
+    end: Date;
+    creatorname: string;
 }

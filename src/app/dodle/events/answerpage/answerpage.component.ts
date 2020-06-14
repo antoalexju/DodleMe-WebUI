@@ -18,7 +18,7 @@ export class AnswerpageComponent implements OnInit {
   isCollapsed: boolean;
   focus1: boolean;
   focus2: boolean;
-  event: _Event;
+  event: _Event = new _Event();
   focus: boolean;
   timeForm: FormGroup;
   time:Time;
@@ -32,10 +32,16 @@ export class AnswerpageComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.apiService.getEvent(this.route.snapshot.paramMap.get('id')).subscribe((evt) => {
-      console.log(evt);
-      this.event = evt;
-    });
+    this.apiService.getEvent(this.route.snapshot.paramMap.get('id')).subscribe(
+      evt => {
+        this.event = evt;
+      },
+      error => {
+        this.router.navigate(['/home']).then(r => {
+          console.log(error);
+        });
+      });
+
     this.timeForm = this.formBuilder.group({
       dateDeb: ['', Validators.required],
       dateFin: ['', Validators.required]
@@ -52,10 +58,9 @@ export class AnswerpageComponent implements OnInit {
     if(!this.timeForm.invalid){
       this.time.beginDate = this.timeForm.value.dateDeb;
       this.time.endDate = this.timeForm.value.dateFin;
-      this.apiService.createTime(this.time, this.event.idEvent).subscribe(
+      this.apiService.createTime(this.time, this.event.linkId).subscribe(
           event => {
-            console.log(this.time);
-            this.router.navigate(['/event/' + event.idEvent]);
+            this.router.navigate(['/event/' + event.linkId]).then(r => {});
           },
           err => {
             console.error(err);

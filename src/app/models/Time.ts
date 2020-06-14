@@ -1,8 +1,9 @@
 import {Answer} from "./Answer";
 
 export class Time {
+
     idTime: number;
-    beginDate: string;
-    endDate: string;
+    beginDate: Date;
+    endDate: Date;
     answers: Answer[];
 }

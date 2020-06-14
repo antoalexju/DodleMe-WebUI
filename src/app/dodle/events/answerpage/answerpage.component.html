@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                         <app-card>
-                            <div class="title"><h1 class="mb-3">{{event.title}}</h1></div>
+                            <div class="title"><h1 class="mb-3">{{this.event.title}}</h1></div>
                            <!-- <pre>{{event| json}}</pre>-->
                             <app-timelist></app-timelist>
                             <hr>
@@ -20,10 +20,10 @@
                                         </div>
                                         <input class="form-control" placeholder="Votre nom" type="text" (focus)="focus = true" (blur)="focus = false"/>
                                     </div>
-                                    <button type="button" class="btn btn-miage btn-round btn-lg ml-3 mt-2" [routerLink]="['/home']">
+                                    <button type="button" class="btn btn-miage btn-round btn-lg mt-2" [routerLink]="['/home']">
                                         Valider mes choix
                                     </button>
-                                    <button type="button" class="btn btn-miage btn-round btn-lg ml-3 mt-2" (click)="myModal.show()">
+                                    <button type="button" class="btn btn-miage btn-simple btn-sm mt-2 ml-5 mr-4" (click)="myModal.show()">
                                        Proposer un créneau
                                     </button>
                                 </div>
@@ -87,6 +87,8 @@
                         </div>
                     </form>
                 </div>
+                <div class="login-bg"></div>
+                <app-scuares></app-scuares>
             </div>
         </div>
     </div>

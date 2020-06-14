@@ -7,9 +7,9 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let time of event.times">
-        <td>{{time.beginDate}}</td>
-        <td>{{time.endDate}}</td>
+    <tr *ngFor="let time of times">
+        <td>{{time.beginDate.toLocaleDateString()}}&nbsp;&nbsp;&nbsp;&nbsp;<b>{{time.beginDate.getUTCHours() + 'h' + time.beginDate.getMinutes()}}</b></td>
+        <td>{{time.endDate.toLocaleDateString()}}&nbsp;&nbsp;&nbsp;&nbsp;<b>{{time.endDate.getUTCHours() + 'h' + time.endDate.getMinutes()}}</b></td>
         <td class="td-actions text-right">
             <div class="form-check">
                 <label class="form-check-label">
