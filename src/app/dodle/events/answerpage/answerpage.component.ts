@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {ApiService} from "../../../services/api/api.service";
 import {_Event} from "../../../models/Event";
 import {ActivatedRoute} from "@angular/router";
@@ -7,6 +7,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import {Time} from "../../../models/Time";
+import {ModalDirective} from "ngx-bootstrap";
 
 // @ts-ignore
 @Component({
@@ -22,7 +23,7 @@ export class AnswerpageComponent implements OnInit {
   focus: boolean;
   timeForm: FormGroup;
   time:Time;
-  submitted = false;
+  submitted: boolean = false;
 
   constructor(
       private apiService: ApiService,
@@ -50,6 +51,8 @@ export class AnswerpageComponent implements OnInit {
 
   get f() { return this.timeForm.controls; }
 
+  @ViewChild('myModal') public myModal: ModalDirective;
+
   onSubmit(){
 
     this.submitted = true;
@@ -60,7 +63,10 @@ export class AnswerpageComponent implements OnInit {
       this.time.endDate = this.timeForm.value.dateFin;
       this.apiService.createTime(this.time, this.event.linkId).subscribe(
           event => {
-            this.router.navigate(['/event/' + event.linkId]).then(r => {});
+            //this.myModal.hide();
+            //this.router.navigate(['/event/' + this.route.snapshot.paramMap.get('id')]).then(r => {
+            //});
+            this.router.navigate(['/home']).then(r => {});
           },
           err => {
             console.error(err);

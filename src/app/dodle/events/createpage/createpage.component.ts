@@ -6,6 +6,7 @@ import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} fr
 import {BrowserModule} from '@angular/platform-browser';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import {AuthService} from "../../../services/auth/auth.service";
 
 @Component({
   selector: 'app-createpage',
@@ -29,10 +30,16 @@ export class CreatepageComponent implements OnInit, OnDestroy {
   constructor(
       private apiService: ApiService,
       private formBuilder: FormBuilder,
-      private router: Router
+      private router: Router,
+      public auth: AuthService
   ) { }
 
   ngOnInit() {
+
+    if(!this.auth.isLogged()){
+      this.router.navigate(['/home']).then(r => {});
+    }
+
     const body = document.getElementsByTagName("body")[0];
     body.classList.add("evtcreate-page");
 
@@ -60,16 +67,16 @@ export class CreatepageComponent implements OnInit, OnDestroy {
     if(!this.eventForm.invalid){
 
       this.event.title = this.eventForm.value.title;
-      this.event.participants = 1;
+      this.event.participants = 0;
       this.event.location = this.eventForm.value.location;
       this.event.description = this.eventForm.value.description;
       this.event.limitDate = this.eventForm.value.limitDate;
       this.event.isPrivate = this.eventForm.value.isPrivate;
+      this.event.creator = this.auth.user.idUser;
 
       this.apiService.createEvent(this.event).subscribe(
           event => {
-            console.log(event);
-            this.router.navigate(['/event/' + event.linkId]);
+            this.router.navigate(['/event/' + event.linkId]).then(r => {});
           },
           err => {
             console.error(err);

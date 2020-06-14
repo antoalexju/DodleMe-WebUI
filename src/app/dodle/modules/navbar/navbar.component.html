@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" *ngIf="!this.auth.isLogged()">
                 <li class="nav-item">
                     <a [routerLink]="['/login']" class="nav-link btn btn-default d-none d-lg-block">
                         <i class="tim-icons icon-minimal-right"></i> Connexion
@@ -36,6 +36,18 @@
                 <li class="nav-item">
                     <a [routerLink]="['/register']" class="nav-link btn btn-default d-none d-lg-block">
                         <i class="tim-icons icon-check-2"> </i> Créer un compte
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav" *ngIf="this.auth.isLogged()">
+                <li class="nav-item">
+                    <span class="nav-link">
+                        Bonjour, {{this.auth.user.alias}}
+                    </span>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['/logout']" class="nav-link btn btn-default d-none d-lg-block">
+                        <i class="tim-icons icon-user-run"> </i> Se déconnecter
                     </a>
                 </li>
             </ul>

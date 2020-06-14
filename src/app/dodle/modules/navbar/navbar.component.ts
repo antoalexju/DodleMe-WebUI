@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {AuthService} from "../../../services/auth/auth.service";
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,9 @@ import {Component, HostListener, OnInit} from '@angular/core';
 export class NavbarComponent implements OnInit {
   isCollapsed: boolean;
 
-  constructor() { }
+  constructor(
+      public auth: AuthService
+  ) { }
 
   @HostListener("window:scroll", ["$event"])
   onWindowScroll() {

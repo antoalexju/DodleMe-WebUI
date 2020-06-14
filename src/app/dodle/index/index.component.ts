@@ -1,5 +1,6 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import noUiSlider from "nouislider";
+import {AuthService} from "../../services/auth/auth.service";
 
 @Component({
   selector: 'app-index',
@@ -15,7 +16,9 @@ export class IndexComponent implements OnInit, OnDestroy {
   pagination = 3;
   pagination1 = 1;
 
-  constructor() { }
+  constructor(
+      public auth: AuthService
+  ) { }
 
   ngOnInit(): void {
     var body = document.getElementsByTagName("body")[0];

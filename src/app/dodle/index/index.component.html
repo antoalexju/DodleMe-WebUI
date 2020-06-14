@@ -15,7 +15,10 @@
                 <h3>
                     Réunissez les Miagistes<br>
                     <br>
-                    <a [routerLink]="['/event/create']" class="btn btn-lg btn-round btn-miage">
+                    <a [routerLink]="['/login']" class="btn btn-lg btn-round btn-miage" *ngIf="!this.auth.isLogged()">
+                        <i class="tim-icons icon-simple-add"></i>&nbsp;&nbsp;Créer un événement
+                    </a>
+                    <a [routerLink]="['/event/create']" class="btn btn-lg btn-round btn-miage" *ngIf="this.auth.isLogged()">
                         <i class="tim-icons icon-simple-add"></i>&nbsp;&nbsp;Créer un événement
                     </a>
                 </h3>
