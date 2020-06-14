@@ -12,9 +12,11 @@ export class LoginpageComponent implements OnInit, OnDestroy {
   focus: boolean;
   focus1: boolean;
   isCollapsed: boolean;
-  submitted: boolean = false;
+  submittedLog: boolean = false;
+  submittedAnon: boolean = false;
   userForm: FormGroup;
   focus3: boolean;
+  loginForm: FormGroup;
 
   constructor(
       private formBuilder: FormBuilder,
@@ -23,11 +25,21 @@ export class LoginpageComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+
+    if(this.auth.isLogged()){
+      this.router.navigate(['/home']).then(r => {});
+    }
+
     var body = document.getElementsByTagName("body")[0];
     body.classList.add("login-page");
 
     this.userForm = this.formBuilder.group({
       username: ['', Validators.required],
+    });
+
+    this.loginForm = this.formBuilder.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required],
     });
   }
 
@@ -37,20 +49,22 @@ export class LoginpageComponent implements OnInit, OnDestroy {
   }
 
   get f() { return this.userForm.controls; }
+  get g() { return this.loginForm.controls; }
 
-  onSubmit() {
-
+  onLoginSubmit() {
+    this.submittedLog = true;
+    console.log()
   }
 
   async onUsernameSubmit() {
 
-    this.submitted = true;
+    this.submittedAnon = true;
 
     if(!this.userForm.invalid){
       this.auth.registerAnonyme(this.userForm.value.username);
     }
     else {
-      this.submitted = false;
+      this.submittedAnon = false;
     }
 
   }

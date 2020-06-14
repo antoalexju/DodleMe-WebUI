@@ -51,12 +51,15 @@ export class ApiService {
     public createAnonUser(user: User): Observable<any> {
         return this.httpClient.post(this.API_URL+'/user/register?anon=true', JSON.stringify(user), this.httpOptions);
     }
-  public register(user: User, anon: Boolean): Observable<any> {
-      const httpOptions = {
-          headers: new HttpHeaders({'Content-Type':'application/json'})
-      };
-      return this.httpClient.post(this.API_URL + '/user/register?anon='+anon, JSON.stringify(user), httpOptions)
-  }
+
+    public register(user: User, anon: Boolean): Observable<any> {
+        return this.httpClient.post(this.API_URL + '/user/register?anon='+anon, JSON.stringify(user), this.httpOptions);
+    }
+
+    public login(user: User){
+        return this.httpClient.post(this.API_URL + '/login', JSON.stringify(user), this.httpOptions);
+    }
+
 
 }
 

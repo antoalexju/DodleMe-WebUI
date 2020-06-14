@@ -10,26 +10,18 @@
                         <div class="square square-8" id="square8"></div>
                         <div class="card card-register">
                             <div class="card-header">
-                                <img
-                                        alt="Card image"
-                                        class="card-img"
-                                        src="assets/img/header1.jpg"
-                                />
-
+                                <img alt="Card image" class="card-img" src="assets/img/header1.jpg"/>
                                 <h4 class="card-title">Connexion</h4>
                             </div>
                             <div class="card-body">
-                                <form class="form">
-                                    <div
-                                            class="input-group"
-                                            [ngClass]="{ 'input-group-focus': focus === true }"
-                                    >
+                                <form class="form" (submit)="onLoginSubmit()" [formGroup]="loginForm">
+                                    <div class="input-group" [ngClass]="{ 'input-group-focus': focus === true }">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <i class="tim-icons icon-single-02"> </i>
+                                                <i class="tim-icons icon-email-85"> </i>
                                             </div>
                                         </div>
-                                        <input class="form-control" placeholder="Full Name" type="text" (focus)="focus = true" (blur)="focus = false" />
+                                        <input class="form-control" placeholder="Email" formControlName="email" [ngClass]="{ 'is-invalid': submittedLog && g.email.errors }" type="text" (focus)="focus = true" (blur)="focus = false" />
                                     </div>
                                     <div class="input-group" [ngClass]="{ 'input-group-focus': focus1 === true }">
                                         <div class="input-group-prepend">
@@ -37,8 +29,9 @@
                                                 <i class="tim-icons icon-lock-circle"> </i>
                                             </div>
                                         </div>
-                                        <input class="form-control" placeholder="Password" type="password" (focus)="focus1 = true" (blur)="focus1 = false" />
+                                        <input class="form-control" placeholder="Password" formControlName="password" [ngClass]="{ 'is-invalid': submittedLog && g.password.errors }" type="password" (focus)="focus1 = true" (blur)="focus1 = false" />
                                     </div>
+                                    <!--
                                     <div class="form-check">
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="checkbox" value="">
@@ -47,15 +40,14 @@
                                                 <span class="check"></span>
                                             </span>
                                         </label>
-                                    </div>
+                                    </div>-->
                                 </form>
                                 <hr>
                                 <div class="row">
                                     <div class="col">
-                                        <span class="btn btn-miage btn-lg" href="javascript:void(0)">
+                                        <button class="btn btn-miage btn-lg" (click)="onLoginSubmit()">
                                             Se connecter
-                                        </span>
-                                        <!--#TODO à connecter avec la BDD-->
+                                        </button>
                                     </div>
                                     <div class="col">
                                         <button class="btn btn-miage btn-simple btn-lg" (click)="myModal.show()">
@@ -90,7 +82,7 @@
                                         <i class="tim-icons icon-single-02"> </i>
                                     </span>
                                             </div>
-                                            <input class="form-control" formControlName="username" type="test" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" (focus)="focus3 = true" (blur)="focus3 = false"/>
+                                            <input class="form-control" formControlName="username" type="test" [ngClass]="{ 'is-invalid': submittedAnon && f.username.errors }" (focus)="focus3 = true" (blur)="focus3 = false"/>
                                             <div *ngIf="f.username.errors" class="invalid-feedback" role="alert">Vous devez choisir un pseudo</div>
                                         </div>
                                     </div>
